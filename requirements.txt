@@ -1,0 +1,12 @@
+langchain-classic
+langchain-community
+langchain-experimental
+chromadb
+pypdf
+langchain-google-genai
+langchain-openai
+langchain-anthropic
+langchain-huggingface
+"fastapi[standard]"
+streamlit
+requests
