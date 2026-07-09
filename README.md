@@ -34,13 +34,25 @@ brew install zstd
 # --- Linux ---
 sudo apt-get install zstd
 ```
-### 3. Download Ollama and preferred model
-
-Download from: https://ollama.com/download or
+### 3. Build the FAISS index
+Place the documents (.pdf and .docx) inside the data folder on the main page, then run
 ```bash
-curl -fsSL https://ollama.com/install.sh | sh
+python -m src.ingest
 ```
-### 4. Build the FAISS index
+This instructs documents to be chunked and embedded, and the FAISS index will be created (2 files in faiss_index folder)
+
+### 4. Download Ollama and preferred model
+```bash
+# Download from https://ollama.com/download or use:
+curl -fsSL https://ollama.com/install.sh | sh
+
+# Keep ollama running (possibly in a separate terminal)
+ollama serve
+
+# Pull model of choosing from Ollama ('mistral' for balanced use, 'gemma2:2b' for hardware constraints)
+ollama pull mistral
+```
+
 ### 5. Run UI
 
 ---
