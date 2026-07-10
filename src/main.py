@@ -1,9 +1,10 @@
+from pathlib import Path
 # Used to perfrom the RAG function to retrive data from the FAISS database and perform semantic search
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_ollama import OllamaLLM
 
-from src.ingest import ingest_documents, FAISS_FOLDER
+FAISS_FOLDER = Path("faiss_index/")
 
 def vector_db():
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
