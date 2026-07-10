@@ -61,9 +61,9 @@ streamlit run app.py
 The chatbot will run on: http://localhost:8501 (or another available port that streamlit chooses)
 
 ---
-Breakdown of the process:
+## Breakdown of the process:
 - Documents are loaded and the content is broken into chunks.
-- Each of these chunks are into embeddings and stored in the FAISS vector database
-- When user asks a question, FAISS retrieves relevant chunks
-- These chunks are passed as context to the LLM
-- The LLM genereates accurate answers based on the context
+- Each of these chunks are converted into embeddings and stored in the FAISS vector database.
+- When user asks a question on the UI, FAISS retrieves relevant chunks.
+- These chunks are passed as context to the LLM along with the user query.
+- The LLM generates accurate answers based on the context and sends to the UI.
