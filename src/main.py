@@ -3,7 +3,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_ollama import OllamaLLM
 
-from ingest import ingest_documents, FAISS_FOLDER
+from src.ingest import ingest_documents, FAISS_FOLDER
 
 ingest_documents()
 

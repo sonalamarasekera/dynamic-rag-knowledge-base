@@ -4,7 +4,7 @@ from pathlib import Path
 from pypdf import PdfReader
 from docx import Document
 
-DATA_FOLDER = Path("../data/")
+DATA_FOLDER = Path("data/")
 
 def extract_pdf_data(file_path: Path) -> str:
     text = []
